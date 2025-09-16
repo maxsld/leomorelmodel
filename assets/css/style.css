@@ -2,6 +2,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
+
+:root {
+  /* Couleurs globales */
+  --global-color-white: #ffffff;
+  --global-color-black: #1a1a1a;
+  --global-color-background: rgb(255, 255, 255);
+  --global-color-gray: #cecece;
+  --global-color-dark-gray: #383838;
+  --global-color-light-gray: #555;
+  --global-color-dark: rgba(27, 27, 27, 0.95);
+  --global-color-blue: rgb(5, 115, 188);
+  ;
+
+
+  /* Tailles de police responsives */
+  --font-xs: clamp(0.8rem, 1vw, 0.9rem);
+  --font-sm: clamp(0.935rem, 1.2vw, 1rem);
+  --font-md: clamp(1rem, 1.5vw, 1.05rem);
+  --font-lg: clamp(1.25rem, 2vw, 1.5rem);
+  --font-xl: clamp(1.75rem, 3vw, 2.4rem);
+  --font-xxl: clamp(2.5rem, 5vw, 3.2rem);
+  --font-hero: clamp(3rem, 7vw, 3.8rem);
+}
+
 /* Reset */
 * {
   margin: 0;
@@ -11,9 +35,30 @@
 
 html, body {
   font-family: 'Cabin', sans-serif;
-  background: #fff; /* Fond blanc visible autour de la navbar */
+  background: #e8ddcc; /* Fond blanc visible autour de la navbar */
   color: #333;
   margin: 0;
+}
+
+.section-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8rem 1rem;
+}
+
+.feature-tag{
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 0.5rem;
+    letter-spacing: .5px;
+    padding: .6rem 1.2rem;
+    border: 1px solid #5e5e5e;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5rem;
 }
 
 .container{
@@ -123,15 +168,10 @@ html, body {
 }
 
 
-.instagram-link img {
-  width: 24px;
-  height: 24px;
-  opacity: 0.9;
-  transition: opacity 0.3s ease;
-}
-
-.instagram-link img:hover {
-  opacity: 1;
+.instagram-link i{
+    color: #e8ddcc;
+    font-size: 3rem;
+    margin-left: 1rem;
 }
 
 /* Hero section */
@@ -184,12 +224,7 @@ html, body {
   font-weight: 500;
   letter-spacing: 2px;
   margin-bottom: 1rem;
-  opacity: .8;
-
-  /* Dégradé métal */
-  background: linear-gradient(45deg, #e0e0e0, #ffffff, #f0f0f0, #b0b0b0);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #e8ddcc;
 }
 
 
@@ -222,6 +257,125 @@ html, body {
   background: #046307;
 }
 
+
+
+.about{
+    text-align: center;
+}
+
+.about .description{
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 1rem;
+    font-weight: 100;
+    line-height: 1.6;
+    letter-spacing: .5px;
+    font-size: 1.8rem;
+}
+
+.about .description img{
+    width: 34px;
+    height: 34px;
+    margin: 0 .5rem;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+
+.image-container {
+    position: relative;
+    margin-top: 50px;
+  }
+
+  .about-img {
+    display: block;
+    margin: 50px auto;
+    width: 400px;
+    border-radius: 1rem;
+    height: auto;
+    transition: transform 0.5s;
+  }
+
+  .sticky-img {
+    position: sticky;
+    top: 100px; /* distance par rapport au haut */
+  }
+
+
+.contact{
+    text-align: center;
+}
+
+  /* Formulaire contact - Style moderne */
+.contact-form {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.contact-form label {
+  font-weight: 600;
+  margin-bottom: 0rem;
+  color: #333333;
+  text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid #afafaf;
+  border-radius: 10px;
+  font-size: 1rem;
+  width: 100%;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #1e90ff;
+  box-shadow: 0 0 0 3px rgba(30,144,255,0.2);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form button {
+  border: none;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1.1rem;
+  letter-spacing: -0.025rem;
+}
+
+
+#form-result {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 500;
+  color: green;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .contact-form {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .nav-center {
@@ -246,4 +400,112 @@ html, body {
     align-items: center;
     gap: 1rem;
   }
+
+  .instagram-link{
+    display: none;
+  }
+}
+
+/* FOOTER GLOBAL */
+.site-footer {
+  background: #00170f;
+  padding: 4rem 2rem 2rem;
+  font-size: 0.95rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  margin-top: 6rem;
+  text-align: left;
+  color: var(--global-color-white);
+}
+
+.site-footer a:hover{
+  text-decoration: underline;
+}
+
+/* CONTAINER PRINCIPAL */
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+/* BLOC GAUCHE : LOGO + TAGLINE */
+
+.footer-logo {
+  color: var(--global-color-white);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer-logo .logo{
+  width: 70px;
+}
+
+/* BLOC CENTRE : LIENS */
+.footer-links {
+  display: flex;
+  gap: 3rem;
+}
+
+
+.footer-links a {
+  color: var(--global-color-white);
+  opacity: .6;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+
+/* BLOC DROIT : CONTACT + RÃƒâ€°SEAUX + CTA */
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.footer-social a {
+  color: var(--global-color-white);
+  opacity: .6;
+  font-size: 1.4rem;
+  transition: opacity 0.2s ease;
+}
+
+
+/* LIENS LÃƒâ€°GAUX */
+.footer-legal {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  font-size: 0.85rem;
+}
+
+.footer-legal a {
+  color: #888888;
+  text-decoration: none;
+}
+
+.footer-legal a:hover {
+  text-decoration: underline;
+}
+
+/* COPYRIGHT */
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #888;
 }

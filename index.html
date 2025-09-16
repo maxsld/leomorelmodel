@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/animation.css">
+      <script src="https://kit.fontawesome.com/ddff5b2124.js" crossorigin="anonymous"></script>
 </head>
 <body>
     
@@ -24,6 +25,8 @@
 
   <div class="nav-right">
     <a href="#contact" class="button">Réserver une collaboration <img src="assets/img/star-white.svg" alt=""></a>
+              <a href="" target="_blank" aria-label="Instagram" class="instagram-link"><i
+              class="fa-brands fa-instagram"></i></a>
   </div>
 </header>
 
@@ -37,17 +40,99 @@
 
 
     <div class="hero-content">
-<h1>LÉO MOREL</h1>
-    <p>Disponible pour shootings mode, campagnes sportives et collaborations créatives à Annecy & partout en France.</p>
+<h1 class="animate-fade-in">LÉO MOREL</h1>
+    <p class="animate-fade-in">Disponible pour shootings mode, campagnes sportives et collaborations créatives à Annecy & partout en France.</p>
     <div class="hero-buttons">
-      <a class="button" href="#portfolio">Voir mon portfolio</a>
-      <a class="button2" href="#contact">Réserver une collaboration <img src="assets/img/star-black.svg" alt=""></a>
+      <a class="button animate-fade-in" href="#portfolio">Voir mon portfolio</a>
+      <a class="button2 animate-fade-in" href="#contact">Réserver une collaboration <img src="assets/img/star-black.svg" alt=""></a>
     </div>
     </div>
 
 </main>
     
 </div>
+
+
+<section class="about section-grid" id="about">
+    <h3 class="feature-tag animate-fade-in">À propos</h3>
+    <p class="description animate-fade-in">Je suis Léo Morel <img src="assets/img/star-black.svg" alt=""> un mannequin passionné basé à Annecy, France. Avec une expérience dans la mode et le sport, je suis toujours prêt à relever de nouveaux défis et à collaborer sur des projets créatifs.</p>
+
+      <div class="image-container animate-fade-in">
+    <img src="assets/img/img1.jpg" class="about-img" />
+    <img src="assets/img/img2.jpg" class="about-img" />
+    <img src="assets/img/img3.jpg" class="about-img" />
+  </div>
+
+</section>
+
+
+<section class="contact">
+    <h3 class="feature-tag">Contact</h3>
+    <form class="contact-form" action="https://formspree.io/f/" method="POST">
+      <label for="name">Nom</label>
+      <input type="text" id="name" name="name" placeholder="Votre nom complet" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="votre.email@example.com" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5"></textarea>
+      <!-- your other form fields go here -->
+      <button type="submit" class="button">Envoyer</button>
+    </form>
+
+    <div id="form-result"></div>
+</section>
+
+
+
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <!-- Bloc gauche : logo + tagline -->
+      <div class="footer-left">
+        <div class="footer-logo">
+    <span class="logo">LM</span>
+          <p>Léo Morel Model</p>
+        </div>
+      </div>
+
+      <!-- Bloc centre : navigation -->
+      <div class="footer-links">
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about">A propos</a>
+        <a href="#collabs">Collabs</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <!-- Bloc droit : contact + réseaux -->
+      <div class="footer-contact">
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/laurence-daien-chefdechoeur/" target="_blank" aria-label="LinkedIn"><i
+              class="fa-brands fa-instagram"></i></a>
+          <a href="#contact" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mentions légales -->
+    <div class="footer-legal">
+      <a href="terms/mentions.html" target="_blank">Mentions légales</a>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      <p>Site web créé par <a href="https://msd-media.com" style="text-decoration: underline; color: white;">MSD
+          Media</a></p> <br>
+      <p>&copy; 2025 MSD Media. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.0/ScrollTrigger.min.js"></script>
+<script src="assets/js/script.js"></script>
 
 </body>
 </html>
